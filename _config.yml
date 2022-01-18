@@ -1,6 +1,6 @@
-title: Researcher
-url: "https://saitejautpala.com"
-baseurl: "/"
+title: R
+url: "https://saitejautpala.github.io"
+baseurl: "/researcher"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
