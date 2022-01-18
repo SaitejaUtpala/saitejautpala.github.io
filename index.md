@@ -6,12 +6,12 @@ layout: default
 
 <img class="profile-picture" src="sherlock.jpg">
 
-Hi! I am a staff research associate at University of California, Santa Barbara. Before that I worked as 
+Hi! I am a staff research associate at University of California, Santa Barbara. I am also Lead Engineer/Maintainer for the Open source library <a href="https://github.com/geomstats/geomstats">Geomstats</a>  Before that I worked as 
 software engineer at Mastercard. I completed my Masters at IIT Kanpur in Computer Science.
 
 ## Research Interest
 
-blah blah
+statistical learning theory, geometric statistics, geometric (deep) learning, uncertainty estimation
 
 
 
