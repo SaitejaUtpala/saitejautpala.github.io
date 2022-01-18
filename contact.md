@@ -3,9 +3,9 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+* Email: [saitejautpala@gmail.com](mailto:saitejautpala@gmail.com)
 
-* Phone: [+91-123123](tel:+91-123123)
+* Phone: [+1-8202582399](tel:+18202582399), [+91-9701849586](tel:+91-9701849586)
 
 ---
 
