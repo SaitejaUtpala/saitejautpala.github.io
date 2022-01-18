@@ -16,7 +16,6 @@ statistical learning theory, geometric statistics, geometric (deep) learning, un
 
 
 
-
 ## Publications
 
 1. S. Utpala and B. K. Sriperumbudur, "Shrinkage Estimation of Bochner integrals", In Preparation. 

@@ -20,7 +20,5 @@ nav:
    link: "/"
  - name: "Resume"
    link: "resume.pdf"
--  name: "Oberwolfach"
-   link: "Geomstats_Oberwolfach.pdf"
  - name: "Contact"
    link: "contact"
