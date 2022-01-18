@@ -1,5 +1,5 @@
-title: R
-url: "https://saitejautpala.github.io"
+title: Researcher
+url: "https://ankitsultana.com"
 baseurl: "/researcher"
 
 markdown: kramdown
@@ -7,9 +7,9 @@ markdown: kramdown
 
 tracking_id: #
 
-footer: No
+footer: yes
 footer_url: "https://github.com/ankitsultana"
-footer_text: "Page created from researcher theme at"
+footer_text: "Page design by Ankit Sultana"
 
 sass:
     style: compressed
