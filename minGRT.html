@@ -13,7 +13,7 @@ Group Representations
 
 Def1 : *Group Action*: Let $G$ be group and $X$ be any set. Group action is homomorphism from group to Symmetric Group on $X$ i.e., $r: G \rightarrow \text{Sym}(X)$
 
-Def2 : *Group Representation*: G be Group, V be Vectorspace then $\rho : G \rightarrow \text{GL}(V)$ s.t $\rho$ is  homomorphism.
+Def2 : *Group Representation*: G be Group, V be Vectorspace then Group Representation $\rho : G \rightarrow \text{GL}(V)$ s.t $\rho$ is  homomorphism.
 
 Def3 : *Matrix Representation*: G be Group then $\rho : G \rightarrow \text{GL}_{n}(\mathbb{R})$
 
@@ -61,7 +61,7 @@ $$\begin{align*}T' &= \frac{1}{|G|} \sum_{g \in G} \psi_{2}(g) \circ T \circ  \p
 \psi_{2}(a) T' \psi_{1}(a^{-1}) &= \frac{1}{|G|} \sum_{g \in G} \psi_{2}(a)\psi_{2}(g) \circ T \circ  \psi_{1}(g^{-1})\psi_{1}(a^{-1})  && \psi_{2}(a), \psi_{1}(a^{-1}) \text{are linear maps on V}\\
 &= \frac{1}{|G|} \sum_{g \in G} \psi_{2}(ag) \circ T \circ  \psi_{1}(ag)^{-1} && \psi_{2}, \psi_{1}  \text{ are group homomorphisms} \\
 &= \frac{1}{|G|} \sum_{h \in G} \psi_{2}(h) \circ T \circ  \psi_{1}(h^{-1}) && \text{reparametrizing} \\
-&= T' && \text{definition} \\
+&= T' && \text{definition}\\
 \end{align*}$$
 
 Hence $T' \in \text{Hom}(\psi_{1}, \psi_{2})$ 
@@ -84,14 +84,25 @@ now let $T' \in \text{Hom}_{G}(\rho, \rho)$ new linear map obtained by averaging
 
 $$T' = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ T \circ \rho(g^{-1})$$
 
-* $T'$ is linear, since it average of linear maps. 
-* if $v \in W$, then $T'(v) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ \text{Id} \circ \rho(g^{-1}) = \text{Id}$
-* if $a$
+
+                * $T'$ is linear, since it average of linear maps. 
+                * if $v \in W$, then $T'(v) = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ \text{Id} \circ \rho(g^{-1}) = \text{Id}$
+                * if $v \in W$, $T'(v) \in W$
+
+Now consider $\text{Ker} T'(W)$, following things hold about $W^{0}=\text{Ker} T'(W)$
+    
+    * $T'$ is homomorphism between representation, so $\text{Ker} T'$ is invariant subspace
+    * $V = W + W^{0}$ because $x \in V = \underbrace{T'(x)}_{\in W} + \underbrace{x - T'(x)}_{\in W^{0}}$
+    * $W \cap W^{0} = \{0\}$ because $x \in W \cap W^{0} \text{ then } x = \text{Id}(x) =  T(x) = 0$
 
 
+* (strong) Induction on dimension of representation
 
+  * 1 dimensional reps are irreducible and hence completely reducible
+  * Let all reps of dimension $< k$ are completely irreducible. Now consider rep $\phi$ of dimension $k$.
+    from first step $\phi = \phi^{1} \otimes \phi^{2}$, $\phi^{1}$, $\phi^{2}$ are completely reducible 
+    by induction hypothesis 
 
-* Induction
 
 Let $W$ be invariant subspace of $V$ under G-rep $\rho$. Then there exits another complement invariant subspace $W^{0}$ to $W$, i.e., $V= W \oplus W^{0}$
 
@@ -100,7 +111,9 @@ Let $W$ be invariant subspace of $V$ under G-rep $\rho$. Then there exits anothe
 Let $\phi: G \rightarrow \text{GL}(V), \psi : G \rightarrow \text{GL}(W)$ are irreducible reps  and $T \in \text{Hom}_{G}(\phi, \psi)$  then $T=0$
 or $T$ is isomorphism
 
-Proof:
+Proof: $T \in \text{Hom}_{G}(\phi, \psi)$, $\phi, \psi$ are irreducible. 
+$\text{Ker} T \leq V$ , $T(V) \leq W$ are invariant subspaces. If $T \neq 0$ then $\text{Ker } T \neq V$, $T(V) \neq \{ 0\}$
+Hence it has to be that $\text{Ker } T = \{ 0\}, T(V)= W$ which implies $T$ is isomoprhism
 
 
 Character Theory
