@@ -14628,126 +14628,35 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <h5 id="Group-Action-of-P4-on-functions-from--$%5Cmathbb%7BZ%7D%5E2-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">Group Action of P4 on functions from  $\mathbb{Z}^2 \rightarrow \mathbb{R}^{\ell}$<a class="anchor-link" href="#Group-Action-of-P4-on-functions-from--$%5Cmathbb%7BZ%7D%5E2-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">&#182;</a></h5><p>Let $F(\mathbb{Z}^2, \mathbb{R}^{\ell}) = \{f: \mathbb{Z}^2 \rightarrow \mathbb{R}^{\ell} \}$. Then most basic group action $\odot : \text{P4} \times F(\mathbb{Z}^2, \mathbb{R}^{\ell}) \rightarrow  F(\mathbb{Z}^2, \mathbb{R}^{\ell})$ of $\text{P4}$ on $F$ is given by</p>
 <p>$(r,x,y) \odot f = f \circ a$ where $a_{r,x,y}(x',y') = (r, x ,y)^{-1} \odot ()$</p>
 <h5 id="Group-Action-of-P4-on-functions-from-$%5Ctext%7BP4%7D-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">Group Action of P4 on functions from $\text{P4} \rightarrow \mathbb{R}^{\ell}$<a class="anchor-link" href="#Group-Action-of-P4-on-functions-from-$%5Ctext%7BP4%7D-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">&#182;</a></h5><h3 id="**P4-Convolution-and-Correlation**"><u>**P4 Convolution and Correlation**</u><a class="anchor-link" href="#**P4-Convolution-and-Correlation**">&#182;</a></h3><p>given kernel $k : \mathbb{Z}^2 \rightarrow \mathbb{R}$ and function $f: \mathbb{Z}^2 \rightarrow \mathbb{R}$, convolution  would generate a function $conv : \text{P4} \rightarrow \mathbb{R}$</p>
-<table>
-<thead><tr>
-<th style="text-align:left">$r$</th>
-<th style="text-align:center">$r'$</th>
-<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">0</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">0</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td style="text-align:left">0</td>
-<td style="text-align:center">3</td>
-<td style="text-align:right">3</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead><tr>
-<th style="text-align:left">$r$</th>
-<th style="text-align:center">$r'$</th>
-<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">0</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td style="text-align:left">1</td>
-<td style="text-align:center">3</td>
-<td style="text-align:right">2</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead><tr>
-<th style="text-align:left">$r$</th>
-<th style="text-align:center">$r'$</th>
-<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">0</td>
-</tr>
-<tr>
-<td style="text-align:left">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:right">1</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead><tr>
-<th style="text-align:left">$r$</th>
-<th style="text-align:center">$r'$</th>
-<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:center">1</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:center">2</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td style="text-align:left">3</td>
-<td style="text-align:center">3</td>
-<td style="text-align:right">0</td>
-</tr>
-</tbody>
-</table>
+<!-- | $r$      | $r'$        | $r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$     |    
+| :---     |    :----:   |    ---: |
+| 0        | 0           | 0       |
+| 0        | 1           | 1       |
+| 0        | 2           | 2       |
+| 0        | 3           | 3       |
+
+
+|  $r$     | $r'$        | $r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$     |    
+| :---     |    :----:   |    ---: |
+| 1        | 0           | 3       |
+| 1        | 1           | 0       |
+| 1        | 2           | 1       |
+| 1        | 3           | 2       |
+
+|  $r$     | $r'$        | $r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$     |    
+| :---     |    :----:   |    ---: |
+| 2        | 0           | 2       |
+| 2        | 1           | 3       |
+| 2        | 2           | 0       |
+| 2        | 3           | 1       |
+
+|  $r$     | $r'$        | $r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$     |    
+| :---     |    :----:   |    ---: |
+| 3        | 0           | 1       |
+| 3        | 1           | 2       |
+| 3        | 2           | 3       |
+| 3        | 3           | 0       | -->
+
 <h3 id="Efficient-Implementation-:-Exploiting-semi-direct-product-group-structure-of-P4"><strong>Efficient Implementation : Exploiting semi direct product group structure of P4</strong><a class="anchor-link" href="#Efficient-Implementation-:-Exploiting-semi-direct-product-group-structure-of-P4">&#182;</a></h3>
 </div>
 </div>
@@ -14798,7 +14707,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4GroupConvolution</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -14814,12 +14723,6 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
         <span class="n">rotated_permuted_kernel</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">()</span>
         <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">rotated_permuted_kernel</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">output</span>
-        
-        
-        
-
-        
-        
 </pre></div>
 
      </div>
