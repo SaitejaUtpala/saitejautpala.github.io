@@ -14565,8 +14565,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Regular-Group-Convolution-Neural-Networks"><strong>Regular Group Convolution Neural Networks</strong><a class="anchor-link" href="#Regular-Group-Convolution-Neural-Networks">&#182;</a></h1><p>Regular Group Convolution Neural Networks are extremely simple to implement. 'Regular' represents kind of 
-representation used group convolution layers. Other way that is better scalable is Steerable CNNs</p>
+<h1 id="Regular-Group-Equivariant-Convolution-Neural-Networks-with-pytorch"><strong>Regular Group Equivariant Convolution Neural Networks with pytorch</strong><a class="anchor-link" href="#Regular-Group-Equivariant-Convolution-Neural-Networks-with-pytorch">&#182;</a></h1><p>Regular Group Convolution Neural Networks are extremely simple to implement. 'Regular' represents kind of 
+representation used in convolution layers. Other way that is better scalable is Steerable CNNs. we would need to work on 5,6 dimensional 
+tensors, it becomes hard to keep track what different dimensions stand for. So einops for manipulating tensors in readable way</p>
 
 </div>
 </div>
@@ -14575,12 +14576,13 @@ representation used group convolution layers. Other way that is better scalable 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 <span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">from</span> <span class="nn">einops</span> <span class="kn">import</span> <span class="n">rearrange</span>
 </pre></div>
 
      </div>
@@ -14594,7 +14596,7 @@ representation used group convolution layers. Other way that is better scalable 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="**Group-P4**"><u>**Group P4**</u><a class="anchor-link" href="#**Group-P4**">&#182;</a></h4><p>P4 is Discrete Rotation-Translation group. Rotations are done at ${0, 90, 180, 270}$ degrees and translations are done by elements in $\mathbb{Z}^2$. P4 can be seen as 4 copies 
 of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are many equivalent(homomorphically) ways to describe the group</p>
-<p>1) $$ \displaystyle P4_{1} =  \left\{ 0 , 1, 2, 3 \right\} \times \mathbb{Z}^2 $$</p>
+<p>1) $$\displaystyle P4_{1} =  \left\{ 0 , 1, 2, 3 \right\} \times \mathbb{Z}^2 $$</p>
 <ul>
 <li>$\text{ with group operation  being} \,\, (r,x,y) . (r',x', y') = \left(r+r'\,\, \text{mod} \,\, 4 \,\,, x+x',\,\, y+y'  \right)$</li>
 <li><p>$\text{ with inverse being } (r,x,y)^{-1} = ((4-r)\text{mod} \,\, 4, -x, -y) $</p>
@@ -14626,8 +14628,134 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <h5 id="Group-Action-of-P4-on-functions-from--$%5Cmathbb%7BZ%7D%5E2-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">Group Action of P4 on functions from  $\mathbb{Z}^2 \rightarrow \mathbb{R}^{\ell}$<a class="anchor-link" href="#Group-Action-of-P4-on-functions-from--$%5Cmathbb%7BZ%7D%5E2-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">&#182;</a></h5><p>Let $F(\mathbb{Z}^2, \mathbb{R}^{\ell}) = \{f: \mathbb{Z}^2 \rightarrow \mathbb{R}^{\ell} \}$. Then most basic group action $\odot : \text{P4} \times F(\mathbb{Z}^2, \mathbb{R}^{\ell}) \rightarrow  F(\mathbb{Z}^2, \mathbb{R}^{\ell})$ of $\text{P4}$ on $F$ is given by</p>
 <p>$(r,x,y) \odot f = f \circ a$ where $a_{r,x,y}(x',y') = (r, x ,y)^{-1} \odot ()$</p>
 <h5 id="Group-Action-of-P4-on-functions-from-$%5Ctext%7BP4%7D-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">Group Action of P4 on functions from $\text{P4} \rightarrow \mathbb{R}^{\ell}$<a class="anchor-link" href="#Group-Action-of-P4-on-functions-from-$%5Ctext%7BP4%7D-%5Crightarrow-%5Cmathbb%7BR%7D%5E%7B%5Cell%7D$">&#182;</a></h5><h3 id="**P4-Convolution-and-Correlation**"><u>**P4 Convolution and Correlation**</u><a class="anchor-link" href="#**P4-Convolution-and-Correlation**">&#182;</a></h3><p>given kernel $k : \mathbb{Z}^2 \rightarrow \mathbb{R}$ and function $f: \mathbb{Z}^2 \rightarrow \mathbb{R}$, convolution  would generate a function $conv : \text{P4} \rightarrow \mathbb{R}$</p>
-<p>$(\displaystyle k \ast f)(r,x,y) = \sum_{z} k(x,y) f((r,x,y)^{-1} \odot ()) $</p>
+<table>
+<thead><tr>
+<th style="text-align:left">$r$</th>
+<th style="text-align:center">$r'$</th>
+<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:center">3</td>
+<td style="text-align:right">3</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th style="text-align:left">$r$</th>
+<th style="text-align:center">$r'$</th>
+<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th style="text-align:left">$r$</th>
+<th style="text-align:center">$r'$</th>
+<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th style="text-align:left">$r$</th>
+<th style="text-align:center">$r'$</th>
+<th style="text-align:right">$r^{new} = (4-r+r') \, \, \text{mod} \, \, 4$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
 <h3 id="Efficient-Implementation-:-Exploiting-semi-direct-product-group-structure-of-P4"><strong>Efficient Implementation : Exploiting semi direct product group structure of P4</strong><a class="anchor-link" href="#Efficient-Implementation-:-Exploiting-semi-direct-product-group-structure-of-P4">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Lifting-Convolution">Lifting Convolution<a class="anchor-link" href="#Lifting-Convolution">&#182;</a></h4>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14635,19 +14763,21 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4ConvolutionZ2</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4LiftingConvolution</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">group_size</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">group_size</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">kaiming_uniform_</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">weights</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">parameter</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
             
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
-        <span class="n">rotated_kernel</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">rot90</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">rotated_kernel</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="s1">&#39;b i h w&#39;</span><span class="p">)</span>
+        <span class="n">rotated_kernel</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">rot90</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weights</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="s1">&#39;o i g k k -&gt; (g o) i k k&#39;</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">rotated_kernel</span><span class="p">),</span> <span class="s1">&#39;(b g) o h w -&gt;  b o g h w &#39;</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">group_size</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">output</span>
 </pre></div>
 
@@ -14660,7 +14790,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Lifting-Convolution"><strong>Lifting Convolution</strong><a class="anchor-link" href="#Lifting-Convolution">&#182;</a></h3>
+<h4 id="Group-Convolution">Group Convolution<a class="anchor-link" href="#Group-Convolution">&#182;</a></h4>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14668,12 +14798,26 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4ConvolutionP4</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4GroupConvolution</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__int__</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="n">group_size</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">group_size</span><span class="p">,</span>  <span class="n">kernel_size</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">)</span>
+        <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">kaiming_uniform_</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weights</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">parameter</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+        <span class="n">rotated_permuted_kernel</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">()</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">rotated_permuted_kernel</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span>
+        
+        
+        
+
         
         
 </pre></div>
@@ -14700,7 +14844,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">P4Pooling</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -14718,7 +14862,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">w_filters</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)])</span>
@@ -14759,7 +14903,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">w_filters</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)],</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -14824,7 +14968,7 @@ of $\mathbb{Z}^{2}.$ Hence, we can describe group in 3 parameters. There are man
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">GroupConvolution1</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
