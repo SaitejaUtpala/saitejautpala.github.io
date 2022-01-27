@@ -21,6 +21,6 @@ statistical learning theory, geometric statistics, geometric (deep) learning, un
 
 ## Blog
 
-1.  <a href="/group_equivariant_notebooks.html">Regular Group Equivariant Neural Networks</a>
+<!-- 1.  <a href="/group_equivariant_notebooks.html">Regular Group Equivariant Neural Networks</a> -->
 2.  <a href="/minGRT.html">Blitz Intro to group representation theory for (discrete) steerable CNNs</a>  
  
