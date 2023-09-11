@@ -14,15 +14,15 @@ statistical learning theory, geometric statistics, geometric (deep) learning, un
 
 ## Publications
 
-1. Saiteja Utpala and Bharat K. Sriperumbudur, <a href="https://arxiv.org/pdf/2207.06357.pdf">Shrinkage Estimation of Higher Order Bochner integrals.</a> 
+1. Saiteja Utpala and Bharat K. Sriperumbudur, <a href="https://arxiv.org/pdf/2207.06357.pdf">Shrinkage Estimation of Higher Order Bochner integrals.</a>  
     Under Review at Bernoulli. 
     Topic: Learning Theory, Concentration Inequalities, Functional Analysis.
 
 
-2. Saiteja Utpala, Praneeth Vepakomma, Nina Miolane,  <a href="https://arxiv.org/pdf/2208.04245.pdf">Differentially Private Frechet Mean on the Manifold of Symmetric Positive Definite (SPD) Matrices.</a>  
+2. Saiteja Utpala, Praneeth Vepakomma, Nina Miolane,  <a href="https://arxiv.org/pdf/2208.04245.pdf">Differentially Private Frechet Mean on the Manifold of Symmetric Positive Definite (SPD) Matrices.</a>   
     Accepted at Transaction of Machine Learning Research (TMLR), 2023.
     Topic:  Differential Privacy, Geometric Machine Learning.
 
-3. Saiteja Utpala, Andi Han, Pratik Jawanpuria, Bamdev Mishra, <a href="https://openreview.net/forum?id=paguBNtqiO&referrer=\%5BTMLR\%5D(\%2Fgroup\%3Fid\%3DTMLR">Improved Differentially Private Riemannian Optimization: Fast Sampling and Variance Reduction.</a> 
+3. Saiteja Utpala, Andi Han, Pratik Jawanpuria, Bamdev Mishra, <a href="https://openreview.net/forum?id=paguBNtqiO&referrer=\%5BTMLR\%5D(\%2Fgroup\%3Fid\%3DTMLR">Improved Differentially Private Riemannian Optimization: Fast Sampling and Variance Reduction.</a>  
     Accepted at Transaction of Machine Learning Research (TMLR), 2023.
     Topic:  Differential Privacy, Riemannian Optimization, Non-Convex Optimization.
