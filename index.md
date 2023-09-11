@@ -14,9 +14,16 @@ statistical learning theory, geometric statistics, geometric (deep) learning, un
 
 ## Publications
 
-1. S. Utpala and B. K. Sriperumbudur, <a href="https://arxiv.org/pdf/2207.06357.pdf">Shrinkage Estimation of Bochner integrals</a> Under Review at Bernoulli. 
+1. Saiteja Utpala and Bharat K. Sriperumbudur, <a href="https://arxiv.org/pdf/2207.06357.pdf">Shrinkage Estimation of Higher Order Bochner integrals</a> 
 
-   Topic:  Statistical Learning Theory, Functional Analysis.
+    Under Review at Bernoulli. 
+
+    Topic: Learning Theory, Concentration Inequalities, Functional Analysis.
 
 
+2. Saiteja Utpala, Praneeth Vepakomma, Nina Miolane,  <a href="https://arxiv.org/pdf/2208.04245.pdf">Differentially Private  ́Frechet Mean on the Manifold of Symmetric Positive Definite (SPD) Matrices.</a>  
  
+
+    Accepted at Transaction of Machine Learning Research (TMLR), 2023.
+
+    Topic :  Differential Privacy, Geometric Machine Learning.
