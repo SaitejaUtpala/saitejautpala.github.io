@@ -4,8 +4,7 @@ layout: default
 
 ## About Me
 
-Hi! I am a associative ML scientist at Wadhwani AI. staff research associate at University of California, Santa Barbara. I am also Lead Engineer/Maintainer for the Open source library <a href="https://github.com/geomstats/geomstats">Geomstats</a>. Before that, I worked as a software engineer at Mastercard and I completed my Masters at IIT Kanpur in Computer Science.
-
+Hi! I am a Research SDE at Microsoft Research.
 
 ## Publications
 
