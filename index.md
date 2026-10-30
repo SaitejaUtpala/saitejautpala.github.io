@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 
-Hi! I am a researcher at [MBZUAI](https://mbzuai.ac.ae/), Abu Dhabi, working on **diffusion language models**.
+Currently I am a researcher at MBZUAI, working on diffusion language models.
 Previously, I was a Research Engineer at Princeton University working on the reliability of AI agents, and a
 Research SDE at Microsoft Research.
 Before that, I worked on geometric machine learning and statistics, differential privacy, and nonparametric bounds.
