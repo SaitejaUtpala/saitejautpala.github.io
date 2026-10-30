@@ -57,7 +57,7 @@ title: Publications | Saiteja Utpala
 * Won the UK AISI Bounty of £20,025 for designing and implementing dangerous capability evaluations of LLM agents. *2025*
 * Won the METR Task Bounty of $70,214 for designing 10 ML R&D tasks used in METR's [time-horizon](https://metr.org/time-horizons/) evaluations of LLM agents. [More &rarr;](/work/metr-task-bounty/) *2024*
 * Contributed ~20 questions to [Humanity's Last Exam](https://lastexam.ai/) (#29 of 1,015 contributors); won $5,000 for a symplectic geometry question selected among the Top 50 hardest. [More &rarr;](/work/humanitys-last-exam/) *2024*
-* Contributed 3 research-level questions to Epoch AI's [FrontierMath](https://epoch.ai/frontiermath) and won $1,700. *2024*
+* Contributed 3 research-level questions to Epoch AI's [FrontierMath](https://epoch.ai/frontiermath) and won $1,700. *2025*
 * Won $750 for 2nd place at the ICLR 2021 Computational Geometry & Topology Challenge. *2021*
 * Achieved 10/10 in Machine Learning and Statistics courses at IIT Kanpur. *2020*
 * Received the Academic Excellence Award for the 2018-19 academic session at IIT Kanpur. *2019*
