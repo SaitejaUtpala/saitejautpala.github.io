@@ -7,10 +7,10 @@ layout: default
 Currently I am a researcher at MBZUAI, working on diffusion language models.
 Previously, I was a Research Engineer at Princeton University working on the reliability of AI agents, and a
 Research SDE at Microsoft Research.
-Before that, I worked on geometric machine learning and statistics, differential privacy, and nonparametric bounds.
+Before that, I worked on geometric machine learning and statistics, differential privacy, and nonparametric statistics.
 I hold a Masters in Computer Science and Engineering from IIT Kanpur.
 
-[Email](mailto:saitejautpala@gmail.com) / [GitHub](https://github.com/SaitejaUtpala) / [Google Scholar](https://scholar.google.com/citations?hl=en&user=5oBTAV8AAAAJ&view_op=list_works&sortby=pubdate) / [Resume](resume.pdf)
+[Email](mailto:saitejautpala@gmail.com) / [GitHub](https://github.com/SaitejaUtpala) / [Google Scholar](https://scholar.google.com/citations?hl=en&user=5oBTAV8AAAAJ&view_op=list_works&sortby=pubdate)
 
 {% assign highlights = site.posts | where: "highlight", true %}
 {% if highlights.size > 0 %}
