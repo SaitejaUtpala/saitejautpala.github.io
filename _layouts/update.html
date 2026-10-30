@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="update">
+    <header class="update-header">
+        <p class="update-meta">
+            <span class="update-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% for tag in page.tags %}<span class="update-tag">{{ tag }}</span>{% endfor %}
+        </p>
+        <h1 class="update-title">{{ page.title }}</h1>
+        {% if page.authors %}<p class="update-authors">{{ page.authors }}</p>{% endif %}
+        {% if page.links %}
+        <p class="update-links">
+            {% for link in page.links %}<a class="update-button" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.name }}</a>{% endfor %}
+        </p>
+        {% endif %}
+    </header>
+
+    {% if page.tldr %}
+    <div class="update-tldr"><strong>TL;DR</strong> {{ page.tldr }}</div>
+    {% endif %}
+
+    {{ content }}
+
+    <hr>
+    <p class="update-nav">
+        <a href="{{ '/' | relative_url }}">&larr; Home</a>
+    </p>
+</article>

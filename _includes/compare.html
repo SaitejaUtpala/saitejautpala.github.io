@@ -1,0 +1,7 @@
+<figure class="update-figure">
+    <div class="update-compare">
+        <div><img src="{{ include.left | relative_url }}" alt="{{ include.left_label }}" loading="lazy"><span>{{ include.left_label }}</span></div>
+        <div><img src="{{ include.right | relative_url }}" alt="{{ include.right_label }}" loading="lazy"><span>{{ include.right_label }}</span></div>
+    </div>
+    {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>{% endif %}
+</figure>

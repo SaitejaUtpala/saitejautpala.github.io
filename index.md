@@ -4,22 +4,27 @@ layout: default
 
 ## About Me
 
-Hi! I am a Research SDE at Microsoft Research.
+Hi! I am a researcher at [MBZUAI](https://mbzuai.ac.ae/), Abu Dhabi, working on **diffusion language models**.
+Previously, I was a Research Engineer at Princeton University working on the reliability of AI agents, and a
+Research SDE at Microsoft Research on the GitHub Copilot Workspace team.
+I hold a Masters in Computer Science and Engineering from IIT Kanpur.
 
-## Publications
+[Email](mailto:saitejautpala@gmail.com) / [GitHub](https://github.com/SaitejaUtpala) / [Google Scholar](https://scholar.google.com/citations?hl=en&user=5oBTAV8AAAAJ&view_op=list_works&sortby=pubdate) / [Resume](resume.pdf)
 
-1. Saiteja Utpala, Alex Gu and Pin Yu Chen, <a href="https://arxiv.org/abs/2310.16803.pdf">Language Agnostic Code Embeddings.</a> 
-    Under Review at ACL ARR.  
-    Topic: Code LLMs, Retrieval, Zero Shot Alignment.
+{% assign highlights = site.posts | where: "highlight", true %}
+{% if highlights.size > 0 %}
+## Selected Work
 
-2. Saiteja Utpala, Sara Hooker and Pin Yu Chen, <a href="https://arxiv.org/abs/2310.16111.pdf">Locally Differentially Private Document Generation Using Zero Shot Prompting.</a> 
-    Accepted at EMNLP 2023 (Findings).  
-    Topic: LLMs, De-anonymization attacks, Private Documents.
-
-3. Saiteja Utpala and Bharat K. Sriperumbudur, <a href="https://arxiv.org/pdf/2207.06357.pdf">Shrinkage Estimation of Higher Order Bochner integrals.</a> 
-    Accepted at Bernoulli.  
-    Topic: Learning Theory, Concentration Inequalities, Functional Analysis.
-
-4. Saiteja Utpala, Praneeth Vepakomma, Nina Miolane,  <a href="https://arxiv.org/pdf/2208.04245.pdf">Differentially Private Frechet Mean on the Manifold of Symmetric Positive Definite (SPD) Matrices.</a> 
-    Accepted at Transaction of Machine Learning Research (TMLR), 2023.  
-    Topic: Differential Privacy, Geometric Machine Learning.
+<div class="highlight-list">
+{% for post in highlights %}
+  <div class="highlight">
+    <a class="highlight-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy"></a>
+    <div class="highlight-body">
+      <a class="highlight-title" href="{{ post.url | relative_url }}">{{ post.highlight_title | default: post.title }}</a>
+      {% if post.highlight_badges or post.highlight_venue %}<p class="highlight-venue">{% for badge in post.highlight_badges %}<span class="highlight-badge">{{ badge }}</span> {% endfor %}{{ post.highlight_venue }}</p>{% endif %}
+      <p>{{ post.highlight_summary | default: post.tldr }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endif %}

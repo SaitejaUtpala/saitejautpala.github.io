@@ -15,9 +15,25 @@ sass:
     style: compressed
     sass_dir: _sass
 
+exclude:
+  - README.md
+  - LICENSE
+  - "Resume_2026 (2).pdf"
+  - training_elbow_grid.pdf
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: update
+      permalink: /work/:title/
+
 nav:
  - name: "About"
    link: "/"
+ - name: "Publications"
+   link: "/publications"
  - name: "Resume"
    link: "resume.pdf"
  - name: "Contact"
