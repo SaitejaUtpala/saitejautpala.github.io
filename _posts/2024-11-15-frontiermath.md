@@ -1,6 +1,6 @@
 ---
 title: "Epoch AI FrontierMath"
-date: 2026-10-28 18:00:00 +0400
+date: 2026-10-29 18:00:00 +0400
 tldr: "Invited to contribute to Epoch AI's FrontierMath because of the quality of my Humanity's Last Exam questions. Contributed 3 research-level questions and won $1,700. Invite-only."
 tags: [benchmarks, math]
 thumbnail: /assets/updates/frontiermath/thumb.png
