@@ -6,8 +6,8 @@ thumbnail: /assets/updates/humanitys-last-exam/kimi-k2-hyperbolic-question.png
 highlight: true
 highlight_title: "Humanity's Last Exam"
 highlight_badges: ["Won $5,000", "Top 50 Hardest Question"]
-highlight_venue: "Ranked #29 of 1,015 contributors · Covered by The New York Times · 2024"
-highlight_summary: "Contributed nearly 20 frontier-level questions in Differential Geometry and Theoretical Statistics. One of my symplectic geometry questions was selected among the Top 50 hardest in the benchmark, and Moonshot AI used my question on statistics on hyperbolic manifolds to showcase Kimi K2 Thinking."
+highlight_venue: "2024"
+highlight_summary: "Ranked #29 of 1,015 contributors. Covered by The New York Times. Contributed nearly 20 frontier-level questions in Differential Geometry and Theoretical Statistics. One of my symplectic geometry questions was selected among the Top 50 hardest in the benchmark, and Moonshot AI used my question on statistics on hyperbolic manifolds to showcase Kimi K2 Thinking."
 math: true
 links:
   - name: Paper

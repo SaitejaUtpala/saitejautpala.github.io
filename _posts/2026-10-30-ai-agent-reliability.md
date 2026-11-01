@@ -6,7 +6,7 @@ thumbnail: /assets/updates/agent-reliability/thumb.png
 highlight: true
 highlight_title: "Towards a Science of AI Agent Reliability"
 highlight_badges: ["ICML 2026"]
-highlight_venue: "15 agents · 12 reliability metrics · 2025"
+highlight_venue: "2025"
 highlight_summary: "Rising accuracy hides how unpredictably agents fail. We decompose agent reliability into 12 metrics across consistency, robustness, predictability and safety, and show that over two years of frontier models, accuracy climbed steeply while reliability barely moved."
 links:
   - name: Paper (ICML 2026)

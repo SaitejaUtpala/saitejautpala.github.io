@@ -6,7 +6,7 @@ thumbnail: /assets/updates/metr-task-bounty/metr-time-horizon.png
 highlight: true
 highlight_title: "METR Task Bounty: Time Horizon Evaluations"
 highlight_badges: ["Won $70,214"]
-highlight_venue: "10 tasks · Used in METR's time-horizon evals · 2024"
+highlight_venue: "2024"
 highlight_summary: "Designed and implemented 10 ML R&D tasks for evaluating LLM agents. Several are part of METR's time-horizon suite, the benchmark behind the widely cited finding that the length of tasks AI agents can complete is doubling every few months. Some tasks are private, some are public."
 links:
   - name: METR Time Horizons
