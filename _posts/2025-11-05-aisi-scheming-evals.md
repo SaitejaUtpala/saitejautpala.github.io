@@ -8,7 +8,7 @@ highlight: true
 highlight_title: "Scheming and Dangerous-Capability Evals"
 highlight_badges: ["Won £20,025"]
 highlight_venue: "2025"
-highlight_summary: "I designed and implemented dangerous-capability evaluations of LLM agents, including AI scheming evals: tests for whether agents hide goals, sandbag, or circumvent oversight. Won as part of the UK AISI [evals bounty](https://www.aisi.gov.uk/blog/evals-bounty)."
+highlight_summary: "I designed and implemented dangerous-capability evaluations of LLM agents, including AI scheming evals: tests for whether agents hide goals, sandbag, or circumvent oversight. Won as part of the [UK AISI](https://www.aisi.gov.uk/) [evals bounty](https://www.aisi.gov.uk/blog/evals-bounty)."
 links:
   - name: AISI
     url: https://www.aisi.gov.uk/

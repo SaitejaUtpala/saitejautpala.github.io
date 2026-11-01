@@ -8,7 +8,7 @@ highlight: true
 highlight_title: "Epoch AI FrontierMath"
 highlight_badges: ["Won $1,700", "Invite-only"]
 highlight_venue: "2025"
-highlight_summary: "Invited to contribute to Epoch AI's [FrontierMath](https://epoch.ai/frontiermath) because of the quality of my [Humanity's Last Exam](/work/humanitys-last-exam/) questions. Contributed 3 research-level questions and won $1,700."
+highlight_summary: "Invited to contribute to Epoch AI's [FrontierMath](https://epoch.ai/frontiermath) because of the quality of my [Humanity's Last Exam](https://lastexam.ai/) questions. Contributed 3 research-level questions and won $1,700."
 links:
   - name: FrontierMath
     url: https://epoch.ai/frontiermath

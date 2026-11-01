@@ -53,9 +53,11 @@
         }
     }
 }
-.content a.highlight-title {
+.content .highlight-title {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 19px;
+    color: #222;
+    display: block;
     line-height: 1.3;
 }
 .highlight-venue {

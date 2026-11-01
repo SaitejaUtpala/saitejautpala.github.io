@@ -19,9 +19,9 @@ I hold a Masters in Computer Science and Engineering from IIT Kanpur.
 <div class="highlight-list">
 {% for post in highlights %}
   <div class="highlight">
-    <a class="highlight-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy"></a>
+    <div class="highlight-thumb"><img src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy"></div>
     <div class="highlight-body">
-      <a class="highlight-title" href="{{ post.url | relative_url }}">{{ post.highlight_title | default: post.title }}</a>
+      <span class="highlight-title">{{ post.highlight_title | default: post.title }}</span>
       {% if post.highlight_badges or post.highlight_venue %}<p class="highlight-venue">{% for badge in post.highlight_badges %}<span class="highlight-badge">{{ badge }}</span> {% endfor %}{{ post.highlight_venue }}</p>{% endif %}
       {{ post.highlight_summary | default: post.tldr | markdownify }}
     </div>

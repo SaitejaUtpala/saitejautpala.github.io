@@ -7,7 +7,7 @@ highlight: true
 highlight_title: "Locally Differentially Private Document Generation"
 highlight_badges: ["EMNLP 2023"]
 highlight_venue: "Findings · with Sara Hooker and Pin-Yu Chen"
-highlight_summary: "DP-Prompt uses zero-shot LLM paraphrasing to rewrite documents under local differential privacy. It cuts author-identification F1 by up to 73% on IMDB and Yelp while keeping sentiment utility close to the clean text."
+highlight_summary: "DP-Prompt uses zero-shot LLM paraphrasing to rewrite documents under local differential privacy. It cuts author-identification F1 by up to 73% on IMDB and Yelp while keeping sentiment utility close to the clean text. [arXiv](https://arxiv.org/abs/2310.16111)."
 links:
   - name: Paper
     url: https://arxiv.org/abs/2310.16111

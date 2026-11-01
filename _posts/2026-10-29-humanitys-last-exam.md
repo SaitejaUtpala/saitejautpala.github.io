@@ -7,7 +7,7 @@ highlight: true
 highlight_title: "Humanity's Last Exam"
 highlight_badges: ["Won $5,000", "Top 50 Hardest Question"]
 highlight_venue: "2024"
-highlight_summary: "Ranked #29 of 1,015 contributors. Covered by The New York Times. Contributed nearly 20 frontier-level questions in Differential Geometry and Theoretical Statistics. One of my symplectic geometry questions was selected among the Top 50 hardest in the benchmark, and Moonshot AI used my question on statistics on hyperbolic manifolds to showcase Kimi K2 Thinking."
+highlight_summary: "Ranked #29 of 1,015 contributors to [Humanity's Last Exam](https://lastexam.ai/) ([paper](https://arxiv.org/abs/2501.14249)), covered by [The New York Times](https://www.nytimes.com/2025/01/23/technology/ai-test-humanitys-last-exam.html). Contributed nearly 20 frontier-level questions in Differential Geometry and Theoretical Statistics. One of my symplectic geometry questions was selected among the Top 50 hardest in the benchmark, and Moonshot AI used my question on statistics on hyperbolic manifolds to showcase [Kimi K2 Thinking](https://www.kimi.com/en/blog/kimi-k2-thinking)."
 math: true
 links:
   - name: Paper
