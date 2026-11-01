@@ -6,7 +6,7 @@ layout: default
 
 Currently I am a researcher at MBZUAI, working on diffusion language models.
 Previously, I was a Research Engineer at Princeton University working on the reliability of AI agents, and a
-Research SDE at Microsoft Research.
+Research SDE at Microsoft Research, where I worked on the GitHub Copilot team.
 Before that, I worked on geometric machine learning and statistics, differential privacy, and nonparametric statistics.
 I hold a Masters in Computer Science and Engineering from IIT Kanpur.
 
