@@ -77,4 +77,4 @@ Optional sizes for figures and videos: `size="small"` (60% width) or `size="wide
 ## What's Next
 
 * Next experiment / open question.
-* What I'd love feedback on. Reach out at [saitejautpala@gmail.com](mailto:saitejautpala@gmail.com).
+* What I'd love feedback on. Reach out at firstnamelastname@gmail.com.
