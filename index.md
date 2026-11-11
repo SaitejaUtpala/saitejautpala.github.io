@@ -8,7 +8,8 @@ Currently I am a researcher at MBZUAI, working on diffusion language models.
 Previously, I was a Research Engineer at Princeton University working on the reliability of AI agents, and a
 Research SDE at Microsoft Research, where I worked on the GitHub Copilot team.
 Before that, I worked on geometric machine learning and statistics, differential privacy, and nonparametric statistics.
-I hold a Masters in Computer Science and Engineering from IIT Kanpur.
+I have also independently contributed to several frontier evaluations, including METR, MMTEB, Humanity's Last Exam, and FrontierMath.
+I hold a Masters in Computer Science and Engineering from IIT Kanpur (2020).
 
 Email: firstnamelastname@gmail.com / [GitHub](https://github.com/SaitejaUtpala) / [Google Scholar](https://scholar.google.com/citations?hl=en&user=5oBTAV8AAAAJ&view_op=list_works&sortby=pubdate)
 
