@@ -21,8 +21,10 @@ Email: firstnamelastname@gmail.com / [GitHub](https://github.com/SaitejaUtpala) 
   <div class="highlight">
     <div class="highlight-thumb"><img src="{{ post.thumbnail | relative_url }}" alt="" loading="lazy"></div>
     <div class="highlight-body">
-      <span class="highlight-title">{{ post.highlight_title | default: post.title }}</span>
-      {% if post.highlight_badges or post.highlight_venue %}<p class="highlight-venue">{% for badge in post.highlight_badges %}<span class="highlight-badge">{{ badge }}</span> {% endfor %}{{ post.highlight_venue }}</p>{% endif %}
+      <div class="highlight-head">
+        <span class="highlight-title">{{ post.highlight_title | default: post.title }}</span>
+        {% if post.highlight_badges or post.highlight_venue %}<p class="highlight-venue">{% for badge in post.highlight_badges %}<span class="highlight-badge">{{ badge }}</span> {% endfor %}{{ post.highlight_venue }}</p>{% endif %}
+      </div>
       {{ post.highlight_summary | default: post.tldr | markdownify }}
     </div>
   </div>

@@ -15,11 +15,14 @@ body {
     height: 100%;
 }
 a {
-    text-decoration: none;
     color: $accent;
+    text-decoration: underline;
+    text-decoration-color: $highlight;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
 }
 a:hover {
-    text-decoration: underline;
+    background: $highlight;
 }
 hr {
     border: 0;
