@@ -30,9 +30,9 @@ defaults:
       permalink: /work/:title/
 
 nav:
- - name: "About"
-   link: "/"
- - name: "Publications"
-   link: "/publications"
+ - name: "GitHub"
+   link: "https://github.com/SaitejaUtpala"
+ - name: "Google Scholar"
+   link: "https://scholar.google.com/citations?hl=en&user=5oBTAV8AAAAJ&view_op=list_works&sortby=pubdate"
  - name: "Resume"
-   link: "resume.pdf"
+   link: "/resume.pdf"
