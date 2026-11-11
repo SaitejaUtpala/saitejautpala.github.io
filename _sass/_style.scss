@@ -11,21 +11,30 @@ html {
 }
 body {
     margin: 0;
-    font-family: "Inconsolata";
+    font-family: $serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $ink;
+    background: $paper;
     height: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 a {
-    text-decoration: none;
     color: $accent;
+    text-decoration: underline;
+    text-decoration-color: rgba($accent, 0.3);
+    text-underline-offset: 3px;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration-color: $accent;
 }
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid $rule;
+}
+.wrapper > hr {
+    display: none;
 }
 
 /*
@@ -33,18 +42,34 @@ hr {
  */
 
 #author-name {
+    font-family: $serif;
     font-size: 30px;
-    color: #272727;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #111;
+    text-decoration: none;
     display: inline-block;
 }
 .navbar {
-    padding: 50px 0 50px 0;
+    padding: 56px 0 24px 0;
 }
 .navbar-ul {
     display: inline-block;
     margin: 0;
-    padding: 5px 0 5px 0;
+    padding: 12px 0 5px 0;
     margin-left: 20px;
+    font-family: $sans;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #C4C1BA;
+    a {
+        color: #555;
+        text-decoration: none;
+        &:hover {
+            color: $accent;
+        }
+    }
 }
 .nav-list {
     list-style-type: none;
