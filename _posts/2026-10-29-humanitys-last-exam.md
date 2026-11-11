@@ -4,6 +4,7 @@ tldr: "I contributed nearly 20 questions in Differential Geometry and Theoretica
 tags: [benchmarks, LLM evaluation, math]
 thumbnail: /assets/updates/humanitys-last-exam/kimi-k2-hyperbolic-question.png
 highlight: true
+figure: humanitys-last-exam
 highlight_title: "Humanity's Last Exam"
 highlight_badges: ["Won $5,000", "Top 50 Hardest Question"]
 highlight_venue: "2024"

@@ -2,24 +2,25 @@
 
 .content {
     h1, h3, h4 {
-        font-family: $serif;
-        font-weight: 600;
-        line-height: 1.25;
-        color: #111;
+        font-family: $sans;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        color: $ink;
     }
     h2 {
         font-family: $sans;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        color: $muted;
-        margin: 48px 0 20px 0;
-        padding-bottom: 8px;
-        border-bottom: 1px solid $rule;
+        font-size: clamp(36px, 6vw, 56px);
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        line-height: 1;
+        color: $ink;
+        margin: 96px 0 24px 0;
+        padding-top: 20px;
+        border-top: 6px solid $ink;
     }
     > h2:first-child {
-        margin-top: 24px;
+        margin-top: 64px;
     }
     ol {
         counter-reset: list;
@@ -28,36 +29,38 @@
         list-style-position: none;
         position: relative;
         list-style: none;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 16px 0;
+        border-top: 1px solid $rule-soft;
     }
     ul > li {
         margin: 5px 0 5px 0;
     }
     ul {
-        padding: 0 20px 0 20px;;
+        padding: 0 20px 0 20px;
     }
     ol {
-        padding: 0 30px 0 30px;
+        padding: 0 0 0 56px;
     }
     ol > li, ul > li {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.55;
     }
     ol > li:before {
-        content: "[" counter(list, decimal) "] ";
+        content: counter(list, decimal-leading-zero);
         counter-increment: list;
         position: absolute;
-        left: -30px;
-        color: $muted;
+        left: -56px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: $ink;
     }
     blockquote {
-        //border: 1px solid black;
-        border-left: 3px solid $rule;
-        color: #555;
+        border-left: 6px solid $highlight;
+        color: $body-muted;
         margin: 20px 0 20px 0;
-        padding: 2px 8px 2px 8px;
-        font-style: italic;
+        padding: 2px 12px 2px 12px;
     }
     .profile-picture {
         height: $image-size;

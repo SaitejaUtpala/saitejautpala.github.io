@@ -1,0 +1,8 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-scheming-evals" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-scheming-evals">An eye half hidden behind a black panel</title>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <path d="M36 70 Q100 18 164 70 Q100 122 36 70 Z" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+  <circle cx="100" cy="70" r="23" fill="#FFE14D" stroke="#0A0A0A" stroke-width="2"/>
+  <circle cx="100" cy="70" r="9" fill="#0A0A0A"/>
+  <rect x="100" y="26" width="70" height="88" fill="#0A0A0A"/>
+</svg>

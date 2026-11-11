@@ -4,6 +4,7 @@ tldr: "DP-Prompt paraphrases documents with an LLM under local differential priv
 tags: [LLMs, differential privacy]
 thumbnail: /assets/updates/ldp-prompt/thumb.png
 highlight: true
+figure: dp-prompt
 highlight_title: "Locally Differentially Private Document Generation"
 highlight_badges: ["EMNLP 2023"]
 highlight_venue: "Findings · with Sara Hooker and Pin-Yu Chen"

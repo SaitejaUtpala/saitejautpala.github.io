@@ -1,0 +1,13 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-iclr-geometry" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-iclr-geometry">SPD matrices as ellipses on a manifold, with their mean</title>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <path d="M18 116 Q100 4 182 116" fill="none" stroke="#0A0A0A" stroke-width="1.5" opacity=".35"/>
+  <g fill="none" stroke="#0A0A0A" stroke-width="2">
+    <ellipse cx="44" cy="82" rx="16" ry="7" transform="rotate(-30 44 82)"/>
+    <ellipse cx="72" cy="58" rx="13" ry="8" transform="rotate(20 72 58)"/>
+    <ellipse cx="128" cy="58" rx="15" ry="6" transform="rotate(-15 128 58)"/>
+    <ellipse cx="156" cy="82" rx="14" ry="8" transform="rotate(40 156 82)"/>
+    <ellipse cx="100" cy="96" rx="12" ry="7" transform="rotate(70 100 96)"/>
+  </g>
+  <ellipse cx="100" cy="62" rx="15" ry="8" transform="rotate(10 100 62)" fill="#FFE14D" stroke="#0A0A0A" stroke-width="2.5"/>
+</svg>

@@ -4,6 +4,7 @@ tldr: "Won $70,214 in METR's Task Bounty for designing 10 ML R&D tasks for evalu
 tags: [AI agents, evaluations, ML R&D]
 thumbnail: /assets/updates/metr-task-bounty/metr-time-horizon.png
 highlight: true
+figure: metr-task-bounty
 highlight_title: "METR Task Bounty: Time Horizon Evaluations"
 highlight_badges: ["Won $70,214"]
 highlight_venue: "2024"

@@ -4,6 +4,7 @@ tldr: "Won 2nd place ($750) at the ICLR 2021 Computational Geometry & Topology C
 tags: [geometry, topology, Geomstats]
 thumbnail: /assets/updates/iclr-cgt-2021/thumb.png
 highlight: true
+figure: iclr-geometry
 highlight_title: "ICLR Computational Geometry & Topology Challenge"
 highlight_badges: ["Won $750"]
 highlight_venue: "2nd place · 2021"

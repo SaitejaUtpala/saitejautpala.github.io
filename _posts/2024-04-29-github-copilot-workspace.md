@@ -4,6 +4,7 @@ tldr: "In 2024 I was a Research SDE at Microsoft Research on the GitHub Copilot 
 tags: [coding agents, developer tools]
 thumbnail: /assets/updates/copilot-workspace/thumb.png
 highlight: true
+figure: copilot-workspace
 highlight_title: "GitHub Copilot Workspace"
 highlight_venue: "Microsoft Research · 2024"
 highlight_summary: "In 2024 I was a Research SDE at Microsoft Research on the GitHub Copilot Workspace team. We released the [technical preview](https://github.blog/news-insights/product-news/github-copilot-workspace/): a Copilot-native developer environment where you go from idea, to plan, to code in natural language."

@@ -1,0 +1,23 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-looped-udlm" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-looped-udlm">A grid of tokens inside a loop, with some tokens being revised</title>
+  <defs><marker id="ah-looped-udlm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0A0A0A"/></marker></defs>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <g stroke="#0A0A0A" stroke-width="1.5">
+    <rect x="60" y="46" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="77.75" y="46.75" width="11.5" height="11.5" fill="none"/>
+    <rect x="94" y="46" width="13" height="13" fill="#FFE14D"/>
+    <rect x="111" y="46" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="128.75" y="46.75" width="11.5" height="11.5" fill="none"/>
+    <rect x="60.75" y="63.75" width="11.5" height="11.5" fill="none"/>
+    <rect x="77" y="63" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="94" y="63" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="111" y="63" width="13" height="13" fill="#FFE14D"/>
+    <rect x="128" y="63" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="60" y="80" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="77" y="80" width="13" height="13" fill="#FFE14D"/>
+    <rect x="94.75" y="80.75" width="11.5" height="11.5" fill="none"/>
+    <rect x="111" y="80" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+    <rect x="128" y="80" width="13" height="13" fill="#0A0A0A" stroke="none"/>
+  </g>
+  <path d="M 146 92 A 56 46 0 1 1 146 48" fill="none" stroke="#0A0A0A" stroke-width="2.5" marker-end="url(#ah-looped-udlm)"/>
+</svg>

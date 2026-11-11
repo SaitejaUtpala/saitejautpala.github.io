@@ -5,6 +5,7 @@ tldr: "Invited to contribute to Epoch AI's FrontierMath because of the quality o
 tags: [benchmarks, math]
 thumbnail: /assets/updates/frontiermath/thumb.png
 highlight: true
+figure: frontiermath
 highlight_title: "Epoch AI FrontierMath"
 highlight_badges: ["Won $1,700", "Invite-only"]
 highlight_venue: "2025"

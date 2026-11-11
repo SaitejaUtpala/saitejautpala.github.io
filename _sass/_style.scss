@@ -11,22 +11,22 @@ html {
 }
 body {
     margin: 0;
-    font-family: $serif;
-    font-size: 18px;
-    line-height: 1.6;
+    font-family: $sans;
+    font-size: 17px;
+    line-height: 1.55;
     color: $ink;
     background: $paper;
     height: 100%;
     -webkit-font-smoothing: antialiased;
 }
 a {
-    color: $accent;
+    color: $ink;
     text-decoration: underline;
-    text-decoration-color: rgba($accent, 0.3);
+    text-decoration-thickness: 1.5px;
     text-underline-offset: 3px;
 }
 a:hover {
-    text-decoration-color: $accent;
+    background: $highlight;
 }
 hr {
     border: 0;
@@ -42,33 +42,35 @@ hr {
  */
 
 #author-name {
-    font-family: $serif;
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    color: #111;
+    width: min-content;
+    font-family: $sans;
+    font-size: clamp(64px, 13vw, 132px);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 0.84;
+    color: $ink;
     text-decoration: none;
     display: inline-block;
+    &:hover {
+        background: none;
+    }
 }
 .navbar {
-    padding: 56px 0 24px 0;
+    display: flow-root;
+    padding: 56px 48px 24px 48px;
 }
 .navbar-ul {
     display: inline-block;
     margin: 0;
-    padding: 12px 0 5px 0;
+    padding: 10px 0 5px 0;
     margin-left: 20px;
     font-family: $sans;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #C4C1BA;
+    font-size: 15px;
+    font-weight: 600;
+    color: $ink;
     a {
-        color: #555;
+        color: $ink;
         text-decoration: none;
-        &:hover {
-            color: $accent;
-        }
     }
 }
 .nav-list {
@@ -92,6 +94,10 @@ hr {
 .container {
     max-width: $max-width;
     margin: auto;
+    box-sizing: border-box;
+}
+.content {
+    padding: 0 48px 80px 48px;
 }
 .wrapper {
     min-height: 100%;
@@ -108,48 +114,22 @@ hr {
 
 /* Mobile */
 
-@media (max-width: 800px) {
-    .container {
-        max-width: $med-width;
-        transition: 0.3s ease all;
+@media (max-width: $small-width) {
+    .navbar {
+        padding: 40px 22px 8px 22px;
     }
-}
-
-@media (max-width: 650px) {
-    .container {
-        max-width: 83%;
+    .content {
+        padding: 0 22px 56px 22px;
     }
-    .navbar-ul {
-        margin-top: 5px;
+    #navlist {
+        display: block;
+        float: none;
+        margin: 20px 0 0 0;
+        padding: 0;
     }
-}
-
-@media (max-width: 500px) {
-	.navbar {
-		text-align: center;
-		padding: 50px 0px 0px 0px;
-	}
-	#author-name {
-		width: 100%;
-		float: none;
-	}
-	#navlist {
-		padding: 10px 0 10px 0;
-		margin: 0;
-		display: block;
-		float: none;
-		text-align: center;
-		width: 100%;
-	}
-	#navlist li.alignable {
-		display: inline-block;
-	}
-	#navlist li.pull-left {
-		float: none;
-	}
-	#navlist li.nav-list {
-		margin: 0;
-	}
+    #navlist li.nav-list:first-child {
+        margin-left: 0;
+    }
 }
 
 @import "typography";

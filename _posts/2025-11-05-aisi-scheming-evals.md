@@ -5,6 +5,7 @@ tldr: "Won £20,025 in the UK AISI evals bounty for designing and implementing d
 tags: [AI agents, evaluations, scheming]
 thumbnail: /assets/updates/aisi-evals/thumb.png
 highlight: true
+figure: scheming-evals
 highlight_title: "Scheming and Dangerous-Capability Evals"
 highlight_badges: ["Won £20,025"]
 highlight_venue: "2025"

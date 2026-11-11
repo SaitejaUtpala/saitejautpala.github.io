@@ -6,21 +6,19 @@
 
 .update-date {
     font-family: $sans;
-    font-size: 13px;
-    color: $muted;
+    font-size: 14px;
+    font-weight: 600;
+    color: $ink;
 }
 .update-tag {
     display: inline-block;
     margin-left: 8px;
-    padding: 0 8px;
+    padding: 1px 8px;
     font-family: $sans;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    border: 1px solid $rule;
-    border-radius: 999px;
-    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    background: $highlight;
+    color: $ink;
 }
 .update-meta {
     margin: 0 0 5px 0;
@@ -29,63 +27,96 @@
 /* Homepage highlights */
 
 .highlight {
-    display: flex;
-    gap: 28px;
-    margin: 24px 0 40px 0;
+    display: grid;
+    grid-template-columns: 200px 1fr 230px;
+    grid-template-rows: auto 1fr;
+    column-gap: 28px;
+    padding: 24px 0;
+    border-top: 1px solid $rule;
     p {
-        margin: 8px 0 0 0;
-        font-size: 17px;
-        line-height: 1.5;
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        line-height: 1.55;
+        color: $body-muted;
     }
-    @media (max-width: $small-width) {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: $med-width) {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
     }
 }
+.highlight-body {
+    display: contents;
+}
 .content .highlight-thumb {
-    flex: 0 0 200px;
-    img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    svg, img {
+        display: block;
         width: 200px;
         height: 140px;
-        object-fit: contain;
-        object-position: center;
-        background: #fff;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 6px;
     }
-    @media (max-width: $small-width) {
-        flex-basis: auto;
-        img {
+    img {
+        object-fit: contain;
+        background: $tile;
+    }
+    @media (max-width: $med-width) {
+        grid-row: auto;
+        margin-bottom: 16px;
+        svg, img {
             width: 100%;
             height: auto;
+            max-width: 400px;
         }
     }
 }
 .content .highlight-title {
-    font-family: $serif;
-    font-weight: 600;
-    font-size: 22px;
-    color: #111;
-    display: block;
-    line-height: 1.25;
+    grid-column: 2;
+    grid-row: 1;
+    font-family: $sans;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    color: $ink;
+    @media (max-width: $med-width) {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: 24px;
+    }
 }
-.content .highlight-venue {
+.content .highlight .highlight-venue {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    text-align: right;
+    margin: 4px 0 0 0;
     font-family: $sans;
     font-size: 13px;
-    letter-spacing: 0.02em;
-    color: $muted;
+    font-weight: 600;
+    color: $ink;
+    @media (max-width: $med-width) {
+        grid-column: 1;
+        grid-row: auto;
+        text-align: left;
+        margin-top: 8px;
+    }
+}
+.highlight-body > :not(.highlight-title):not(.highlight-venue) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    @media (max-width: $med-width) {
+        grid-column: 1;
+        grid-row: auto;
+    }
 }
 .highlight-badge {
     display: inline-block;
-    margin-right: 2px;
-    padding: 1px 8px;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: $accent;
-    border: 1px solid rgba($accent, 0.45);
-    border-radius: 999px;
+    margin: 0 2px 4px 0;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $ink;
+    background: $highlight;
 }
 
 /* Updates index */
@@ -102,10 +133,7 @@
     text-decoration: none;
     &:hover {
         text-decoration: none;
-        background: rgba(0, 0, 0, 0.02);
-        h3 {
-            color: $accent;
-        }
+        background: $tile;
     }
     h3 {
         margin: 2px 0 4px 0;
@@ -134,34 +162,38 @@
 .update-header {
     margin-bottom: 20px;
 }
-.update-title {
-    margin: 5px 0;
-    line-height: 1.2;
+.content .update-title {
+    margin: 12px 0 16px 0;
+    font-size: clamp(34px, 5.5vw, 52px);
+    letter-spacing: -0.045em;
+    line-height: 1;
 }
 .update-authors {
     margin: 5px 0;
-    color: #555;
+    color: $body-muted;
 }
 .content a.update-button {
     display: inline-block;
     margin: 4px 8px 4px 0;
-    padding: 3px 12px;
+    padding: 4px 12px;
     font-family: $sans;
     font-size: 13px;
+    font-weight: 700;
     text-decoration: none;
-    border: 1px solid rgba($accent, 0.45);
-    border-radius: 999px;
+    border: 2px solid $ink;
     &:hover {
         text-decoration: none;
-        background: $accent;
-        color: white;
+        background: $highlight;
     }
 }
 .update-tldr {
-    margin: 20px 0;
-    padding: 12px 16px;
-    background: #F3F1EC;
-    border-left: 3px solid $accent;
+    margin: 28px 0;
+    padding: 14px 18px;
+    background: $tile;
+    border-left: 6px solid $highlight;
+}
+.update {
+    max-width: 760px;
 }
 .update-figure {
     margin: 25px 0;
@@ -178,7 +210,7 @@
         font-family: $sans;
         font-size: 13px;
         line-height: 1.5;
-        color: #666;
+        color: $body-muted;
         text-align: left;
     }
     &.figure-small img, &.figure-small video {
@@ -226,7 +258,7 @@
     font-size: 14px;
 }
 .content pre, .content code {
-    background: #F3F1EC;
+    background: $tile;
     font-size: 0.85em;
 }
 .content pre {

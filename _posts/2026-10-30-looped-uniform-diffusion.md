@@ -5,6 +5,7 @@ tldr: "Looping a few early Transformer layers inside each denoising step makes u
 tags: [diffusion LMs, efficiency, looping]
 thumbnail: /assets/updates/looped-udlm/thumb.png
 highlight: true
+figure: looped-udlm
 highlight_title: "Looped Uniform Diffusion Language Models"
 highlight_venue: "Preprint · 2026"
 highlight_summary: "Uniform diffusion LMs, the backbone of Google's [DiffusionGemma](https://ai.google.dev/gemma/docs/diffusiongemma), revise any token while denoising but are expensive to train. We spent ~20,000 H100 hours studying looping in UDLMs: looped models match a non-looped UDLM trained on ~0.5T tokens with up to 3.3x fewer training FLOPs. [arXiv](https://arxiv.org/abs/2610.30066)."

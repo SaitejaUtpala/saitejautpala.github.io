@@ -1,0 +1,10 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-agent-reliability" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-agent-reliability">Accuracy rising steeply while reliability stays flat</title>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <path d="M28 18 V116 H182" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  <polyline points="30,108 70,88 110,62 150,40 178,24" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+  <polyline points="30,96 70,93 110,95 150,91 178,90" fill="none" stroke="#FFE14D" stroke-width="6" stroke-linecap="round"/>
+  <polyline points="30,96 70,93 110,95 150,91 178,90" fill="none" stroke="#0A0A0A" stroke-width="1"/>
+  <text x="172" y="18" text-anchor="end" font-size="10" font-weight="700" fill="#0A0A0A">accuracy</text>
+  <text x="118" y="110" font-size="10" font-weight="700" fill="#0A0A0A">reliability</text>
+</svg>

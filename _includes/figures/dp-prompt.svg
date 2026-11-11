@@ -1,0 +1,24 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-dp-prompt" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-dp-prompt">A document rewritten into a privatized copy</title>
+  <defs><marker id="ah-dp-prompt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0A0A0A"/></marker></defs>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <rect x="28" y="28" width="54" height="84" fill="#fff" stroke="#0A0A0A" stroke-width="2"/>
+  <rect x="118" y="28" width="54" height="84" fill="#fff" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M89 70 H110" stroke="#0A0A0A" stroke-width="2" marker-end="url(#ah-dp-prompt)"/>
+  <path d="M35 42 h40" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 42 h40" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="2 3"/>
+  <path d="M35 51 h30" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 51 h30" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="3 5"/>
+  <path d="M35 60 h38" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 60 h38" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <path d="M35 69 h26" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 69 h26" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="2 5"/>
+  <path d="M35 78 h40" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 78 h40" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="3 3"/>
+  <path d="M35 87 h22" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 87 h22" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="4 5"/>
+  <path d="M35 96 h34" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M125 96 h34" stroke="#0A0A0A" stroke-width="2.5" stroke-dasharray="2 3"/>
+  <circle cx="172" cy="28" r="11" fill="#FFE14D" stroke="#0A0A0A" stroke-width="2"/>
+  <text x="172" y="32.5" text-anchor="middle" font-size="13" font-weight="700" font-style="italic" fill="#0A0A0A">&#949;</text>
+</svg>

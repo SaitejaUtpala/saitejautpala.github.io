@@ -1,0 +1,13 @@
+<svg class="fig" viewBox="0 0 200 140" role="img" aria-labelledby="fig-copilot-workspace" xmlns="http://www.w3.org/2000/svg">
+  <title id="fig-copilot-workspace">Idea, then plan, then code</title>
+  <defs><marker id="ah-copilot-workspace" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0A0A0A"/></marker></defs>
+  <rect width="200" height="140" fill="#F2F2F0"/>
+  <circle cx="38" cy="70" r="15" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+  <circle cx="38" cy="70" r="4" fill="#0A0A0A"/>
+  <path d="M57 70 H76" stroke="#0A0A0A" stroke-width="2" marker-end="url(#ah-copilot-workspace)"/>
+  <rect x="84" y="52" width="36" height="36" fill="none" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M91 62 H113 M91 70 H109 M91 78 H113" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M126 70 H145" stroke="#0A0A0A" stroke-width="2" marker-end="url(#ah-copilot-workspace)"/>
+  <rect x="151" y="52" width="36" height="36" fill="#FFE14D" stroke="#0A0A0A" stroke-width="2.5"/>
+  <path d="M163 62 L157 70 L163 78 M175 62 L181 70 L175 78" fill="none" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

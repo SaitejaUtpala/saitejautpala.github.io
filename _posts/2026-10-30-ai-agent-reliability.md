@@ -4,6 +4,7 @@ tldr: "Agents keep getting more accurate, but not much more reliable. We propose
 tags: [AI agents, reliability, evaluations]
 thumbnail: /assets/updates/agent-reliability/thumb.png
 highlight: true
+figure: agent-reliability
 highlight_title: "Towards a Science of AI Agent Reliability"
 highlight_badges: ["ICML 2026"]
 highlight_venue: "2025"
