@@ -17,12 +17,13 @@ body {
 a {
     color: $accent;
     text-decoration: underline;
-    text-decoration-color: $highlight;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 2px;
+    text-decoration-color: rgba($accent, 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 a:hover {
     background: $highlight;
+    text-decoration-color: $accent;
 }
 hr {
     border: 0;
